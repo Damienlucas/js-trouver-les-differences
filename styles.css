@@ -2,3 +2,29 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+#box-photos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+#steampunk{
+    width: 500px;
+    height: auto;
+}
+#steampunk-modif{
+    width: 500px;
+    height: auto;
+    position: relative;
+}
