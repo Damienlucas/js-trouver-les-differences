@@ -33,3 +33,43 @@ boutCeinture.setAttribute('src', './images/steampunk/bouton-ceinture.png');
 boutCeinture.setAttribute('alt', 'bout de l arme');
 boutCeinture.id = "bouton-ceinture";
 photoModifiee.appendChild(boutCeinture);
+
+dent.setAttribute('src', './images/steampunk/dent.png');
+dent.setAttribute('alt', 'dent');
+dent.id = "dent";
+photoModifiee.appendChild(dent);
+
+fils.setAttribute('src', './images/steampunk/fils-electriques.png');
+fils.setAttribute('alt', 'fils éléctriques');
+fils.id = "fils-electriques";
+photoModifiee.appendChild(fils);
+
+gachette.setAttribute('src', './images/steampunk/gachette.png');
+gachette.setAttribute('alt', 'gachette');
+gachette.id = "gachette";
+photoModifiee.appendChild(gachette);
+
+lacet.setAttribute('src', './images/steampunk/lacet.png');
+lacet.setAttribute('alt', 'lacet de droite');
+lacet.id = "lacet";
+photoModifiee.appendChild(lacet);
+
+medaille.setAttribute('src', './images/steampunk/medaille.png');
+medaille.setAttribute('alt', 'morceau de medaille');
+medaille.id = "medaille";
+photoModifiee.appendChild(medaille);
+
+lacetRajout.setAttribute('src', './images/steampunk/rajout-lacet.png');
+lacetRajout.setAttribute('alt', 'rajout de lacet à gauche');
+lacetRajout.id = "rajout-lacet";
+photoModifiee.appendChild(lacetRajout);
+
+boutRajout.setAttribute('src', './images/steampunk/rajout-bouton.png');
+boutRajout.setAttribute('alt', 'rajout d un bouton à gauche');
+boutRajout.id = "rajout-bouton";
+photoModifiee.appendChild(boutRajout);
+
+verresLunette.setAttribute('src', './images/steampunk/verres-lunettes.png');
+verresLunette.setAttribute('alt', 'verres des lunettes');
+verresLunette.id = "verres-lunettes";
+photoModifiee.appendChild(verresLunette);
