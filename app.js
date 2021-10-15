@@ -1,3 +1,24 @@
+// --------------------------------------------------bootstrap-----------------------------
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+// ----------------------------------------------jeu-----------------------------------------------------
+// ---------------------------------------------choix------------------------------------------------
+const jouerSteampunk = document.getElementById('jouer-steampunk');
+const contBoxPhotos = document.getElementById('cont-box-photos');
+const choix = document.getElementById('choix');
+const menuAccueil = document.getElementById('menu-accueil');
+
+menuAccueil.addEventListener('click', () => {
+    document.location.reload(true);
+})
+
+jouerSteampunk.addEventListener("click", function() {
+    contBoxPhotos.style.display = "block";
+    choix.style.display = "none";
+})
+
+
 const photoOriginal = document.getElementById('photo-original');
 const photoModifiee = document.getElementById('photo-modifiee');
 
@@ -28,6 +49,7 @@ boutArme.setAttribute('src', './images/steampunk/bout-arme.png');
 boutArme.setAttribute('alt', 'bout de l arme');
 boutArme.id = "bout-arme";
 photoModifiee.appendChild(boutArme);
+
 
 boutCeinture.setAttribute('src', './images/steampunk/bouton-ceinture.png');
 boutCeinture.setAttribute('alt', 'bout de l arme');
@@ -73,3 +95,35 @@ verresLunette.setAttribute('src', './images/steampunk/verres-lunettes.png');
 verresLunette.setAttribute('alt', 'verres des lunettes');
 verresLunette.id = "verres-lunettes";
 photoModifiee.appendChild(verresLunette);
+
+boutArme.addEventListener("click", function() {
+    boutArme.style.opacity = "1";
+})
+boutCeinture.addEventListener("click", function() {
+    boutCeinture.style.opacity = "1";
+})
+dent.addEventListener("click", function() {
+    dent.style.opacity = "1";
+})
+fils.addEventListener("click", function() {
+    fils.style.opacity = "1";
+})
+gachette.addEventListener("click", function() {
+    gachette.style.opacity = "1";
+})
+lacet.addEventListener("click", function() {
+    lacet.style.opacity = "1";
+})
+medaille.addEventListener("click", function() {
+    medaille.style.opacity = "1";
+})
+verresLunette.addEventListener("click", function() {
+    verresLunette.style.opacity = "1";
+})
+lacetRajout.addEventListener("click", function() {
+    lacetRajout.style.opacity = "0";
+})
+boutRajout.addEventListener("click", function() {
+    boutRajout.style.opacity = "0";
+})
+

@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --premiere-color: #131214;
+    --text-color: #F8F6FB;
+    --hoverBack-color: #646267;
+    --hoverCo-color: #DDD6E7;
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -9,9 +15,37 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--premiere-color);
+    color: var(--text-color);
+}
+.btn{
+    background: var(--text-color);
+    color: var(--premiere-color);
+}
+.btn:hover{
+    background: var(--hoverBack-color);
+    color: var(--hoverCo-color);
 }
 h1{
     text-align: center;
+}
+.column-center-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+#cont-box-photos{
+    display: none;
+    width: 100vw;
+    height: 100vh;
 }
 #box-photos{
     display: flex;
@@ -36,7 +70,7 @@ h1{
 #bout-arme, #bouton-ceinture, #dent, #fils-electriques, #gachette, #lacet, #medaille, #verres-lunettes{
     position: absolute;
     z-index: 90;
-    display: none;
+    opacity: 0;
 }
 #rajout-lacet, #rajout-bouton{
     position: absolute;
@@ -45,6 +79,7 @@ h1{
 #bout-arme{
     right: 15.7%;
     top: 21%;
+    
 }
 #bouton-ceinture{
     left: 50.2%;
@@ -81,4 +116,16 @@ h1{
 #verres-lunettes{
     left: 43.1%;
     top: 17.9%;
+}
+/* ------------------------------------------------modal------------------- */
+#modal-body-steampunk img{
+    width: 90%;
+    height: auto;
+}
+#modal-body-steampunk p{
+    margin: 15px 0;
+}
+.modal-content{
+    background: var(--premiere-color);
+    color: var(--text-color);
 }
