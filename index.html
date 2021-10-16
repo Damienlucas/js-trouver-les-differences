@@ -20,12 +20,26 @@
         <div id="cont-box-photos">
             <div class="column-center-center">
                 <div id="box-photos">
-                    <div id="photo-original"></div>
-                    <div id="photo-modifiee"></div>
+                    <div id="photo-original">
+                        <p class="text-center">
+                            Vous devez trouver 10 différences sur la photo de droite.
+                        </p>
+                    </div>
+                    <div id="photo-modifiee">
+                        <p class="text-center">
+                            Cliquez sur la photo de droite quand vous aurez trouvé un détail différent.
+                        </p>
+                    </div>
                 </div>
-                <div>
+                <div class="indication">
                     <button class="btn" id="menu-accueil">Menu - Accueil</button>
-                </div>
+                    <p class="score">
+                        Score : <span id="score-valeur"></span>
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>      
             </div>
         </div>
 <!---------------------------------------------- Modal ----------------------------------------------->

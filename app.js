@@ -8,26 +8,44 @@ const jouerSteampunk = document.getElementById('jouer-steampunk');
 const contBoxPhotos = document.getElementById('cont-box-photos');
 const choix = document.getElementById('choix');
 const menuAccueil = document.getElementById('menu-accueil');
+var progressBar = document.querySelector('.progress-bar');
+var decouvert
+var choixDifficulte
+var decouvertPourcent
 
 menuAccueil.addEventListener('click', () => {
     document.location.reload(true);
 })
 
+function option(){
 jouerSteampunk.addEventListener("click", function() {
     contBoxPhotos.style.display = "block";
     choix.style.display = "none";
+    choixDifficulte = 10;
+    decouvert = 0;
+    steampunk();
 })
+}
+option();
+
 
 
 const photoOriginal = document.getElementById('photo-original');
 const photoModifiee = document.getElementById('photo-modifiee');
 
+// --------------------------------------------------progress bar----------------------------------
+var scoreValeur = document.getElementById('score-valeur');
+
+
+// --------------------------------------------fin progress bar-----------------------------------
+// ----------------------------------------------------photo steampunk------------------------------
+function steampunk(){
 var imgSteampunk = document.createElement('img');
 var imgSteampunkModif = document.createElement('img');
 var boutArme = document.createElement('img');
 var boutCeinture = document.createElement('img');
 var boutRajout = document.createElement('img');
-var dent = document.createElement('img');
+var coeur = document.createElement('img');
 var fils = document.createElement('img');
 var gachette = document.createElement('img');
 var lacet = document.createElement('img');
@@ -35,6 +53,19 @@ var medaille = document.createElement('img');
 var lacetRajout = document.createElement('img');
 var verresLunette = document.createElement('img');
 
+var morceau1 = false;
+var morceau2 = false;
+var morceau3 = false;
+var morceau4 = false;
+var morceau5 = false;
+var morceau6 = false;
+var morceau7 = false;
+var morceau8 = false;
+var morceau9 = false;
+var morceau10 = false;
+
+
+scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
 imgSteampunk.setAttribute('src', './images/steampunk/steampunk.jpg');
 imgSteampunk.setAttribute('alt', 'portrait steampunk d une femme armée');
 imgSteampunk.id = "steampunk";
@@ -56,10 +87,10 @@ boutCeinture.setAttribute('alt', 'bout de l arme');
 boutCeinture.id = "bouton-ceinture";
 photoModifiee.appendChild(boutCeinture);
 
-dent.setAttribute('src', './images/steampunk/dent.png');
-dent.setAttribute('alt', 'dent');
-dent.id = "dent";
-photoModifiee.appendChild(dent);
+coeur.setAttribute('src', './images/steampunk/coeur.png');
+coeur.setAttribute('alt', 'coeur du bustier');
+coeur.id = "coeur";
+photoModifiee.appendChild(coeur);
 
 fils.setAttribute('src', './images/steampunk/fils-electriques.png');
 fils.setAttribute('alt', 'fils éléctriques');
@@ -97,33 +128,115 @@ verresLunette.id = "verres-lunettes";
 photoModifiee.appendChild(verresLunette);
 
 boutArme.addEventListener("click", function() {
-    boutArme.style.opacity = "1";
+    if(morceau1 == false){
+        boutArme.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau1 = true;
+    }
 })
 boutCeinture.addEventListener("click", function() {
-    boutCeinture.style.opacity = "1";
+    if(morceau2 == false){
+        boutCeinture.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau2 = true;
+    }
 })
-dent.addEventListener("click", function() {
-    dent.style.opacity = "1";
+coeur.addEventListener("click", function() {
+    if(morceau3 == false){
+        coeur.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau3 = true;
+    }
 })
 fils.addEventListener("click", function() {
-    fils.style.opacity = "1";
+    if(morceau4 == false){
+        fils.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau4 = true;
+    }
 })
 gachette.addEventListener("click", function() {
-    gachette.style.opacity = "1";
+    if(morceau5 == false){
+        gachette.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau5 = true;
+    }
 })
 lacet.addEventListener("click", function() {
-    lacet.style.opacity = "1";
+    if(morceau6 == false){
+        lacet.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau6 = true;
+    }
 })
 medaille.addEventListener("click", function() {
-    medaille.style.opacity = "1";
+    if(morceau7 == false){
+        medaille.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau7 = true;
+    }
 })
 verresLunette.addEventListener("click", function() {
-    verresLunette.style.opacity = "1";
+    if(morceau8 == false){
+        verresLunette.style.opacity = "1";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau8 = true;
+    }
 })
 lacetRajout.addEventListener("click", function() {
-    lacetRajout.style.opacity = "0";
+    if(morceau9 == false){
+        lacetRajout.style.opacity = "0";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau9 = true;
+    }
 })
 boutRajout.addEventListener("click", function() {
-    boutRajout.style.opacity = "0";
+    if(morceau10 == false){
+        boutRajout.style.opacity = "0";
+        decouvert++;
+        scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+        decouvertPourcent = decouvert * 10;
+        progressBar.style.width= decouvertPourcent+"%";
+        progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+        morceau10 = true;
+    }
 })
+}
+// -------------------------------------------------fin photo steampunk------------------------------
 
