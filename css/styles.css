@@ -61,6 +61,7 @@ h1{
     margin-bottom: 8px;
 }
 hr{
+    display: none;
     width: 10px;
 }
 /* ----------------------------------------------progress bar---------------------------------------------------- */
@@ -68,8 +69,9 @@ hr{
     margin-top: 10px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .progress{
     width: 50%;
@@ -110,7 +112,7 @@ hr{
     bottom: 19%;
 }
 #coeur{
-    right: 45%;
+    right: 45.1%;
     bottom: 39.7%;
 }
 #fils-electriques{
@@ -139,7 +141,7 @@ hr{
 }
 #verres-lunettes{
     left: 43.1%;
-    top: 21.4%;
+    top: 21%;
 }
 /* ---------------------------------------------------Fin photo steampunk----------------------------------------- */
 /* ---------------------------------------------------photo ruelle asiatique-------------------------------------- */
@@ -220,7 +222,15 @@ hr{
         align-items: center;
         justify-content: space-around;
     }
-    #menu-accueil{
+    #menu-accueil, #solution{
         margin-top: 0;
+    }
+    .indication{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    hr{
+        display: block;
     }
 }
