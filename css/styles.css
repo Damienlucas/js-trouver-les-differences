@@ -60,8 +60,8 @@ h1{
 #box-photos p{
     margin-bottom: 8px;
 }
-#photo-original, #photo-modifiee{
-    width: 300px;
+hr{
+    width: 10px;
 }
 /* ----------------------------------------------progress bar---------------------------------------------------- */
 .indication{
@@ -142,6 +142,65 @@ h1{
     top: 21.4%;
 }
 /* ---------------------------------------------------Fin photo steampunk----------------------------------------- */
+/* ---------------------------------------------------photo ruelle asiatique-------------------------------------- */
+#china-town{
+    width: 100%;
+    height: auto;
+}
+#china-town-modif{
+    width: 100%;
+    height: auto;
+}
+#cones, #dame, #forza,#photomaton, #pomme, #t, #tel, #cable-gauche{
+    position: absolute;
+    z-index: 90;
+    opacity: 0;
+}
+#ecureuil, #pigeon{
+    position: absolute;
+    z-index: 90;
+}
+#cones{
+    right: 22.5%;
+    bottom: 3.2%;
+}
+#dame{
+    left: 48.1%;
+    bottom: 15.2%;
+}
+#ecureuil{
+    right:7.5%;
+    bottom: 2.4%;
+}
+#pigeon{
+    right: 38.3%;
+    top: 10.3%;
+}
+#forza{
+    left: 37.2%;
+    top: 10%;
+}
+#photomaton{
+    left: 18.2%;
+    bottom: 18.9%;
+}
+#pomme{
+    left: 17%;
+    top: 20.2%;
+}
+#t{
+    right: 9.3%;
+    bottom: 35.3%;
+}
+#tel{
+    left: 14.6%;
+    bottom: 47.6%;
+}
+#cable-gauche{
+    left: 7.4%;
+    bottom: 4.4%;
+}
+/* -----------------------------------------------fin photo ruelle asiatique-------------------------------------- */
 /* ------------------------------------------------modal------------------- */
 #modal-body-steampunk img{
     width: 90%;
@@ -160,9 +219,6 @@ h1{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-    }
-    #photo-original, #photo-modifiee{
-        width: 600px;
     }
     #menu-accueil{
         margin-top: 0;

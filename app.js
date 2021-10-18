@@ -5,6 +5,7 @@ var myInput = document.getElementById('myInput')
 // ----------------------------------------------jeu-----------------------------------------------------
 // ---------------------------------------------choix------------------------------------------------
 const jouerSteampunk = document.getElementById('jouer-steampunk');
+const jouerChinaTown = document.getElementById('jouer-chinaTown');
 const contBoxPhotos = document.getElementById('cont-box-photos');
 const choix = document.getElementById('choix');
 const menuAccueil = document.getElementById('menu-accueil');
@@ -12,6 +13,16 @@ var progressBar = document.querySelector('.progress-bar');
 var decouvert
 var choixDifficulte
 var decouvertPourcent
+var morceau1;
+var morceau2;
+var morceau3;
+var morceau4;
+var morceau5;
+var morceau6;
+var morceau7;
+var morceau8;
+var morceau9;
+var morceau10;
 
 menuAccueil.addEventListener('click', () => {
     document.location.reload(true);
@@ -23,7 +34,34 @@ jouerSteampunk.addEventListener("click", function() {
     choix.style.display = "none";
     choixDifficulte = 10;
     decouvert = 0;
+    morceau1 = false;
+    morceau2 = false;
+    morceau3 = false;
+    morceau4 = false;
+    morceau5 = false;
+    morceau6 = false;
+    morceau7 = false;
+    morceau8 = false;
+    morceau9 = false;
+    morceau10 = false;
     steampunk();
+})
+jouerChinaTown.addEventListener("click", function() {
+    contBoxPhotos.style.display = "block";
+    choix.style.display = "none";
+    choixDifficulte = 10;
+    decouvert = 0;
+    morceau1 = false;
+    morceau2 = false;
+    morceau3 = false;
+    morceau4 = false;
+    morceau5 = false;
+    morceau6 = false;
+    morceau7 = false;
+    morceau8 = false;
+    morceau9 = false;
+    morceau10 = false;
+    chinaTown();
 })
 }
 option();
@@ -52,18 +90,6 @@ var lacet = document.createElement('img');
 var medaille = document.createElement('img');
 var lacetRajout = document.createElement('img');
 var verresLunette = document.createElement('img');
-
-var morceau1 = false;
-var morceau2 = false;
-var morceau3 = false;
-var morceau4 = false;
-var morceau5 = false;
-var morceau6 = false;
-var morceau7 = false;
-var morceau8 = false;
-var morceau9 = false;
-var morceau10 = false;
-
 
 scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
 imgSteampunk.setAttribute('src', './images/steampunk/steampunk.jpg');
@@ -239,4 +265,193 @@ boutRajout.addEventListener("click", function() {
 })
 }
 // -------------------------------------------------fin photo steampunk------------------------------
+// --------------------------------------photo ruelle asiatique-------------------------------------
+function chinaTown(){
+    var imgChinaTown = document.createElement('img');
+    var imgChinaTownModif = document.createElement('img');
+    var cones = document.createElement('img');
+    var dame = document.createElement('img');
+    var ecureuil = document.createElement('img');
+    var forza = document.createElement('img');
+    var photomaton = document.createElement('img');
+    var pigeon = document.createElement('img');
+    var pomme = document.createElement('img');
+    var t = document.createElement('img');
+    var tel = document.createElement('img');
+    var cableGauche = document.createElement('img');
+    
+    scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+    imgChinaTown.setAttribute('src', './images/china town/china town.jpg');
+    imgChinaTown.setAttribute('alt', 'ruelle asiatique');
+    imgChinaTown.id = "china-town";
+    photoOriginal.appendChild(imgChinaTown);
+    
+    imgChinaTownModif.setAttribute('src', './images/china town/china-town-modifie.jpg');
+    imgChinaTownModif.setAttribute('alt', 'ruelle asiatique modifiée');
+    imgChinaTownModif.id = "china-town-modif";
+    photoModifiee.appendChild(imgChinaTownModif);
+    
+    cones.setAttribute('src', './images/china town/cones.png');
+    cones.setAttribute('alt', 'cones de traveaux');
+    cones.id = "cones";
+    photoModifiee.appendChild(cones);
+    
+    
+    dame.setAttribute('src', './images/china town/dame.png');
+    dame.setAttribute('alt', 'dame');
+    dame.id = "dame";
+    photoModifiee.appendChild(dame);
+    
+    ecureuil.setAttribute('src', './images/china town/ecureuil.png');
+    ecureuil.setAttribute('alt', 'ecureuil');
+    ecureuil.id = "ecureuil";
+    photoModifiee.appendChild(ecureuil);
+    
+    forza.setAttribute('src', './images/china town/forza.png');
+    forza.setAttribute('alt', 'enseigne forza');
+    forza.id = "forza";
+    photoModifiee.appendChild(forza);
+    
+    photomaton.setAttribute('src', './images/china town/photomaton.png');
+    photomaton.setAttribute('alt', 'affiche du photomaton');
+    photomaton.id = "photomaton";
+    photoModifiee.appendChild(photomaton);
+    
+    pigeon.setAttribute('src', './images/china town/pigeon.png');
+    pigeon.setAttribute('alt', 'pigeon');
+    pigeon.id = "pigeon";
+    photoModifiee.appendChild(pigeon);
+    
+    pomme.setAttribute('src', './images/china town/pomme.png');
+    pomme.setAttribute('alt', 'pomme');
+    pomme.id = "pomme";
+    photoModifiee.appendChild(pomme);
+    
+    t.setAttribute('src', './images/china town/t.png');
+    t.setAttribute('alt', 'enseigne t');
+    t.id = "t";
+    photoModifiee.appendChild(t);
+    
+    tel.setAttribute('src', './images/china town/tel.png');
+    tel.setAttribute('alt', 'numéro de téléphone');
+    tel.id = "tel";
+    photoModifiee.appendChild(tel);
+    
+    cableGauche.setAttribute('src', './images/china town/cable-gauche.png');
+    cableGauche.setAttribute('alt', 'cable à gauche de la photo');
+    cableGauche.id = "cable-gauche";
+    photoModifiee.appendChild(cableGauche);
+    
+    cones.addEventListener("click", function() {
+        if(morceau1 == false){
+            cones.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau1 = true;
+        }
+    })
+    dame.addEventListener("click", function() {
+        if(morceau2 == false){
+            dame.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau2 = true;
+        }
+    })
+    ecureuil.addEventListener("click", function() {
+        if(morceau3 == false){
+            ecureuil.style.opacity = "0";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau3 = true;
+        }
+    })
+    forza.addEventListener("click", function() {
+        if(morceau4 == false){
+            forza.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau4 = true;
+        }
+    })
+    photomaton.addEventListener("click", function() {
+        if(morceau5 == false){
+            photomaton.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau5 = true;
+        }
+    })
+    pigeon.addEventListener("click", function() {
+        if(morceau6 == false){
+            pigeon.style.opacity = "0";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau6 = true;
+        }
+    })
+    pomme.addEventListener("click", function() {
+        if(morceau7 == false){
+            pomme.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau7 = true;
+        }
+    })
+    t.addEventListener("click", function() {
+        if(morceau8 == false){
+            t.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau8 = true;
+        }
+    })
+    tel.addEventListener("click", function() {
+        if(morceau9 == false){
+            tel.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau9 = true;
+        }
+    })
+    cableGauche.addEventListener("click", function() {
+        if(morceau10 == false){
+            cableGauche.style.opacity = "1";
+            decouvert++;
+            scoreValeur.textContent = `${decouvert} sur ${choixDifficulte}`;
+            decouvertPourcent = decouvert * 10;
+            progressBar.style.width= decouvertPourcent+"%";
+            progressBar.setAttribute('aria-valuenow', decouvertPourcent);
+            morceau10 = true;
+        }
+    })
+    }
 
+// -------------------------------------fin ruelle asiatique-----------------------------------------
